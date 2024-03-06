@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Run a multi-line script
-        run: | 
-      -  apt update , ./build.sh
+      
+      - name: Prepare the environment
+        run: |
+         apt update , apt install sudo , sudo apt update , ./build.sh
