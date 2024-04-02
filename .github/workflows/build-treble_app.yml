@@ -13,5 +13,11 @@ jobs:
       - name: Build APK
         run: |
          ./build.sh
-         pwd
-         ls
+
+      - name: Upload APK to Release 
+        uses: softprops/action-gh-release@master
+        with:
+         files: |
+          /home/runner/work/treble_app/treble_app/*.apk
+         name: PHH Treble Settings APP
+         tag_name: ${{ github.run_id }}
