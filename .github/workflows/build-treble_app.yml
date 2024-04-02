@@ -13,3 +13,5 @@ jobs:
       - name: Build APK
         run: |
          ./build.sh
+         pwd
+         ls
