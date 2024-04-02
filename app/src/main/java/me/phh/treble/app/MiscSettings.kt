@@ -10,7 +10,6 @@ import androidx.preference.Preference
 
 object MiscSettings : Settings {
     val mobileSignal = "key_misc_mobile_signal"
-    val fpsDivisor = "key_misc_fps_divisor"
     val displayFps = "key_misc_display_fps"
     val maxAspectRatioPreO = "key_misc_max_aspect_ratio_pre_o"
     val multiCameras = "key_misc_multi_camera"
@@ -47,6 +46,7 @@ object MiscSettings : Settings {
     val disableVoiceCallIn = "key_misc_disable_voice_call_in"
     val disableSfGlBackpressure = "key_misc_disable_sf_gl_backpressure"
     val disableSaeUpgrade = "key_misc_disable_sae_upgrade"
+    val escoTransportUnitSize = "key_misc_esco_transport_unit_size"
 
     override fun enabled() = true
 }
