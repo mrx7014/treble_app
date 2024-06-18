@@ -46,6 +46,7 @@ object MiscSettings : Settings {
     val forceDisplay5g = "key_misc_force_display_5g"
     val disableVoiceCallIn = "key_misc_disable_voice_call_in"
     val disableSfGlBackpressure = "key_misc_disable_sf_gl_backpressure"
+    val disableSfHwcBackpressure = "key_misc_disable_sf_hwc_backpressure"
     val disableSaeUpgrade = "key_misc_disable_sae_upgrade"
     val escoTransportUnitSize = "key_misc_esco_transport_unit_size"
 
