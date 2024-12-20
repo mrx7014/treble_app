@@ -18,3 +18,4 @@ jobs:
          files: |
           /home/runner/work/treble_app/treble_app/*.apk
          name: Phh Treble Settings App
+         tag_name: phh
