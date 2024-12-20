@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: Phh Treble Settings App Build
 on:
   workflow_dispatch:
 
@@ -19,5 +17,4 @@ jobs:
         with:
          files: |
           /home/runner/work/treble_app/treble_app/*.apk
-         name: PHH Treble Settings APP
-         tag_name: ${{ github.run_id }}
+         name: Phh Treble Settings App
