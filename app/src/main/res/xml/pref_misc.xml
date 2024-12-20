@@ -205,6 +205,11 @@
             android:title="Under-display fp color" />
         <Preference android:title="Securize"
             android:key="key_misc_securize" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="key_misc_secure_adb"
+            android:title="Secure adb"
+            android:summary="Computer requires approval" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Debugging">
         <Preference android:title="Debug Sensors">

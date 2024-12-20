@@ -22,6 +22,7 @@ object MiscSettings : Settings {
     val forceNavbarOff = "key_misc_force_navbar_off"
     val bluetooth = "key_misc_bluetooth"
     val securize = "key_misc_securize"
+    val secureAdb = "key_misc_secure_adb"
     val removeTelephony = "key_misc_removetelephony"
     val remotectl = "key_misc_remotectl"
     val disableAudioEffects = "key_misc_disable_audio_effects"
