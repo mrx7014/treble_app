@@ -57,7 +57,7 @@ jobs:
         with:
           files: |
             **/*.apk
-          name: "Phh Treble Settings App $(date +'%Y-%m-%d %H:%M')"
+          name: "Phh Treble Settings App"
           tag_name: "phh-${{ github.run_number }}"
           body: |
             Automated build of Phh Treble Settings App
