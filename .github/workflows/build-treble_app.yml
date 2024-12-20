@@ -10,12 +10,18 @@ jobs:
       
       - name: Build APK
         run: |
-         ./build.sh
+          chmod +x build.sh
+          ./build.sh
 
-      - name: Upload APK to Release 
+      - name: List APK files
+        run: |
+          echo "Listing APK files in the directory..."
+          ls -al treble_app/
+
+      - name: Upload APK to Release
         uses: softprops/action-gh-release@master
         with:
-         files: |
-          /home/runner/work/treble_app/treble_app/*.apk
-         name: Phh Treble Settings App
-         tag_name: phh
+          files: |
+            treble_app/*.apk
+          name: Phh Treble Settings App
+          tag_name: phh
