@@ -5,14 +5,12 @@
     android:persistent="true"
     android:sharedUserId="android.uid.system">
 
-
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.DIAGNOSTIC" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -41,11 +39,11 @@
             <meta-data
                 android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                 android:value="true" />
-
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+        
         <service
             android:name=".NubiaFanControlTilesService"
             android:exported="true"
@@ -56,27 +54,11 @@
             <meta-data
                 android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                 android:value="true" />
-
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
-        <service
-            android:name=".NubiaShoulderBtnTilesService"
-            android:exported="true"
-            android:icon="@drawable/tile_game_mode"
-            android:label="Shoulder triggers"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:enabled="false">
-            <meta-data
-                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
-                android:value="true" />
-
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
-
+        
         <receiver android:name=".Starter"
             android:exported="true">
             <intent-filter>
@@ -87,16 +69,26 @@
             </intent-filter>
         </receiver>
 
-	<activity-alias android:enabled="true" android:exported="true" android:name=".TopLevelSettingsActivity" android:targetActivity=".SettingsActivity">
+        <!-- Activity alias to appear in "About phone" -->
+        <activity-alias
+            android:enabled="true"
+            android:exported="true"
+            android:name=".TopLevelSettingsActivity"
+            android:targetActivity=".SettingsActivity">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.homepage"/>
-            <meta-data android:name="com.android.settings.summary" android:resource="@string/desc_activity_top_level"/>
-            <meta-data android:name="com.android.settings.title" android:resource="@string/title_activity_top_level"/>
-            <meta-data android:name="com.android.settings.icon" android:resource="@drawable/ic_settings"/>
-            <meta-data android:name="com.android.settings.order" android:value="-190"/>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.system"/>
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/desc_activity_top_level"/>
+            <meta-data android:name="com.android.settings.title"
+                android:resource="@string/title_activity_top_level"/>
+            <meta-data android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings"/>
+            <meta-data android:name="com.android.settings.order"
+                android:value="-190"/>
         </activity-alias>
 
         <activity
@@ -125,8 +117,7 @@
         <service
             android:name=".REPL"
             android:exported="true"
-            android:permission="android.permission.INTERACT_ACROSS_USERS"
-            />
+            android:permission="android.permission.INTERACT_ACROSS_USERS" />
 
         <activity
             android:name=".DesktopInput"
