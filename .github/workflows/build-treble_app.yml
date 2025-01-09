@@ -42,14 +42,6 @@ jobs:
       - name: Build APK
         run: ./build.sh
         id: build
-        
-      - name: Upload APK as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: app-release
-          path: |
-            **/*.apk
-          retention-days: 14
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
